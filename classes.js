@@ -108,6 +108,7 @@ class ProgressiveManager extends Manager {
 
   hire(employee) {
     this.reports.push(employee);
+    // super.hire(); using this will tie to the hire(function) in the class that was extended
     if (this.reports.length === 0) {
       this.title = "Not a manager";
     } else if (this.reports.length >= 1 && this.reports.length <= 3) {
@@ -178,16 +179,14 @@ class Machine {
   }
 
   // IF YOU DON'T USE ARROW FUNCTION
-  /*
-  reboot() {
-    let me = function () {
-      this.wear_and_tear_count -= 10;
-      this.needs_reboot = false;
-    }
-    let me2 = me.bind(this)
-    return me2
-  }
-  */
+
+  // reboot() {
+  //   return function () {
+  //     this.wear_and_tear_count -= 10;
+  //     this.needs_reboot = false;
+  //   }.bind(this)
+  // }
+
 
 
 }
