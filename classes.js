@@ -176,6 +176,20 @@ class Machine {
       this.needs_reboot = false;
     }
   }
+
+  // IF YOU DON'T USE ARROW FUNCTION
+  /*
+  reboot() {
+    let me = function () {
+      this.wear_and_tear_count -= 10;
+      this.needs_reboot = false;
+    }
+    let me2 = me.bind(this)
+    return me2
+  }
+  */
+
+
 }
 
 
